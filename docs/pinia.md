@@ -108,7 +108,7 @@ Now we are ready to start developing our `<Todos>` component!
 
 We will start with the fully completed store, and a component rendering each of the todos.
 
-Let's start with the store. There's a good chunk of code, but it's mostly straight forward. Check the [Pinia docs](https://pinia.vuejs.org/) for more information. Bascally, we:
+Let's start with the store. There's a good chunk of code, but it's mostly straight forward. Check the [Pinia docs](https://pinia.vuejs.org/) for more information. Basically, we:
 
 - declare some reactive state
 - defines some computed values (`completedTodos`, `incompleteTodos`, `filteredTodos`)
@@ -383,7 +383,7 @@ describe("Todos", () => {
 });
 ```
 
-![](./images/pinia-2.png)
+![Screenshot of Cypress using mountWithPinia command](./images/pinia-2.png)
 
 Works great! We could write some more targeted unit tests for the `todosStore`. I would consider this if the logic became signficantly more complex. Since this application is simple, I'm happy to test the store implicitly via the user interface, but it can be difficult to debug complex business logic in this fashion.
 
@@ -391,7 +391,7 @@ If I decided I needed more granular unit tests, I'd recommend a similar approach
 
 ## Conclusion
 
-- Write code in `supportFile`, by default `cypress/support/component.ts`, to execute befor each spec.
+- Write code in `supportFile`, by default `cypress/support/component.ts`, to execute before each spec.
 - Use a `beforeEach()` in `supportFile` to do pre-test setup.
 - Use `setActivePinia` to correctly create a new Pinia store for each test.
 - Write a custom `cy.mount()` function to reuse in all your tests.
